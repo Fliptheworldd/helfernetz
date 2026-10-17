@@ -1,24 +1,20 @@
 # Rechtliche Angaben – Arbeitsentwurf, nicht zur ungeprüften Veröffentlichung
 
 ## Noch erforderlich
-- Tatsächlicher Betreiber: natürliche Person, nicht eingetragener Verein/Initiative oder eingetragener Verein? Vollständiger Name und gegebenenfalls Rechtsform/vertretungsberechtigte Person.
-- Zustellfähige Anschrift: Straße, Hausnummer, PLZ, Ort.
-- Bei Registereintrag: Register und Nummer; weitere Identifikationsangaben nur soweit einschlägig.
 - Tatsächlicher E-Mail-Anbieter und Umgang mit Anfragen: Zugriff, Speicherung, Weitergabe an Helfer und Löschung bestätigen.
 - PayPal: konkreter Link, Kontoinhaber/Zahlungsempfänger, Verwendungszweck und tatsächlicher Status bezüglich Zuwendungsbestätigungen. Keine steuerliche Absetzbarkeit zusagen.
 
-## Impressum – auszufüllender Text
+## Bestätigte Betreiberangaben – veröffentlicht
 Kleines Helfernetz Berlin-Brandenburg · Team Köpenick
-Betreiber: [vollständiger rechtlicher Name, gegebenenfalls Rechtsform]
-Vertreten durch: [falls einschlägig]
-Anschrift: [Straße, Hausnummer, PLZ, Ort]
+Betreiber: VachSystems, Inhaber Patrick Vach
+Anschrift: Charlottenburger Str. 142, 13086 Berlin, Deutschland
+Betreiberkontakt: contact@vachsystems.de
 Telefon: 030 81451625
 E-Mail: info@helfernetz.com
-Register: [nur falls einschlägig]
 
 ## Datenschutz – vorbereitete Bausteine
 ### Verantwortlicher
-[Name und Anschrift wie oben], erreichbar unter info@helfernetz.com.
+Patrick Vach, VachSystems, Anschrift wie oben, erreichbar unter contact@vachsystems.de.
 
 ### Bereitstellung der Website
 Die Website wird über GitHub Pages ausgeliefert. Beim Abruf werden technisch erforderliche Verbindungsdaten, insbesondere IP-Adresse und Angaben zur Anfrage, an den Hostingdienst übermittelt. Für die Bereitstellung und Sicherheit ist Art. 6 Abs. 1 lit. f DSGVO als Rechtsgrundlage zu prüfen. Vertragspartner, Empfänger, Speicherfristen und gegebenenfalls Drittlandübermittlung müssen anhand des tatsächlich eingesetzten GitHub-Kontos und der gültigen Vertragsunterlagen ergänzt werden.
@@ -33,7 +29,7 @@ Suchnotizen und Checklisten bleiben im Arbeitsspeicher der geöffneten Seite. Fo
 Im aktuellen Quellcode sind keine Analysewerkzeuge, Werbetracker oder extern geladenen Schriftarten eingebunden. Die Website setzt selbst keine Cookies für diese Zwecke. Externe Links führen nach Anklicken zum jeweiligen Anbieter.
 
 ### Rechte betroffener Personen
-Nach Maßgabe der gesetzlichen Voraussetzungen bestehen Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch gegen Verarbeitungen auf Grundlage berechtigter Interessen. Eine erteilte Einwilligung kann für die Zukunft widerrufen werden. Es besteht ein Beschwerderecht bei einer Datenschutzaufsichtsbehörde. Zuständige Behörde nach Bestätigung des Verantwortlichen ergänzen.
+Nach Maßgabe der gesetzlichen Voraussetzungen bestehen Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch gegen Verarbeitungen auf Grundlage berechtigter Interessen. Eine erteilte Einwilligung kann für die Zukunft widerrufen werden. Es besteht ein Beschwerderecht bei einer Datenschutzaufsichtsbehörde. Zuständige Aufsichtsbehörde ergänzen.
 
 ## Quellen zur Fertigstellung
 - https://www.gesetze-im-internet.de/ddg/__5.html
