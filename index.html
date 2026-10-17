@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#171d1b">
+  <meta name="description" content="Kleines Helfernetz Berlin-Brandenburg – Team Köpenick. Hilfe für vermisste und gefundene Katzen, Chip-Auslesen und verständliche Suchanleitungen.">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Helfernetz Köpenick — Website-Entwurf</title>
+  <link rel="canonical" href="https://helfernetz.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="Helfernetz Köpenick — Gemeinsam zurück nach Hause.">
+  <meta property="og:description" content="Website-Entwurf für das Helfernetz Berlin-Köpenick. Hilfe für vermisste und gefundene Katzen und Wissen für die Suche.">
+  <meta property="og:url" content="https://helfernetz.com/">
+  <meta property="og:image" content="https://helfernetz.com/assets/cat-riverside.webp">
+  <meta property="og:image:alt" content="Eine getigerte Katze am Ufer">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="./assets/cat-riverside.webp">
+  <link rel="stylesheet" href="./styles.css?v=4">
+  <script src="./app.js?v=4" defer></script>
+  <script src="./flyer.js?v=5" defer></script>
+</head>
+<body>
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-diagonal" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 20V4m-6 6 6-6 6 6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="m8 3 3 5-3 2c1.3 3 2.7 4.4 5.8 5.7l2.2-3 5 3c-1 4.8-3.3 6.2-7.6 4.1A21.5 21.5 0 0 1 4.2 10.6C2.1 6.3 3.2 4 8 3Z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="10" y="10" width="4" height="4"/><path d="M9 3v3m6-3v3m-6 12v3m6-3v3M3 9h3m-3 6h3m12-6h3m-3 6h3"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.5 13a8.7 8.7 0 0 1-9.5-9.5A8.8 8.8 0 1 0 20.5 13Z"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v.1"/></symbol>
+  </defs></svg>
+  <a class="skip-link" href="#hilfe">Direkt zur Hilfe</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand brand-with-emblem" href="#start" aria-label="Helfernetz Köpenick – Startseite"><img class="header-emblem" src="./assets/helfernetz-emblem-matt.webp" width="80" height="80" alt=""><span class="brand-type"><strong>helfernetz<span class="brand-dot">.</span></strong><small>TEAM KÖPENICK</small></span></a>
+      <div class="header-actions"><button class="header-contact" data-open="contact"><span>Notfallkontakt</span><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></button><button class="menu-toggle" aria-label="Menü öffnen" aria-controls="site-menu" aria-expanded="false"><span>Menü</span><span class="menu-lines" aria-hidden="true"><i></i><i></i></span></button></div>
+    </div>
+  </header>
+
+  <dialog id="site-menu" class="menu-dialog" aria-labelledby="menu-title">
+    <div class="menu-shell">
+      <div class="menu-top"><a class="menu-brand" href="#start" aria-label="Helfernetz Köpenick – Startseite"><img src="./assets/helfernetz-emblem-matt.webp" width="76" height="76" alt=""><span>Kleines Helfernetz<small>Berlin-Brandenburg · Team Köpenick</small></span></a><button class="menu-close" aria-label="Menü schließen"><span>Schließen</span><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div>
+      <div class="menu-body"><div class="menu-intro"><p class="eyebrow" id="menu-title">ORIENTIERUNG</p><p class="menu-statement">Gemeinsam.<br>Für die Tiere.</p><p>Hilfe und Wissen für die Katzen<br>in unserem Kiez.</p></div><nav class="menu-links" aria-label="Hauptnavigation"><a href="#hilfe"><span>Hilfe finden</span><svg class="icon" aria-hidden="true"><use href="#i-diagonal"/></svg></a><a href="#wissen"><span>Richtig suchen</span><svg class="icon" aria-hidden="true"><use href="#i-diagonal"/></svg></a><a href="#flyer"><span>Flyer erstellen</span><svg class="icon" aria-hidden="true"><use href="#i-diagonal"/></svg></a><a href="#downloads"><span>Downloads</span><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg></a><a href="#netzwerk"><span>Unser Team</span><svg class="icon" aria-hidden="true"><use href="#i-diagonal"/></svg></a><a href="#fragen"><span>Häufige Fragen</span><svg class="icon" aria-hidden="true"><use href="#i-diagonal"/></svg></a></nav></div>
+      <div class="menu-bottom"><span>BERLIN-BRANDENBURG · TEAM KÖPENICK</span><button data-open="contact">Notfallkontakt <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></button></div>
+    </div>
+  </dialog>
+
+  <main>
+    <section class="hero" id="start" aria-labelledby="hero-title">
+      <div class="hero-media"><img src="./assets/cat-riverside.webp" width="1536" height="1024" alt="Eine getigerte Katze blickt am ruhigen Ufer in die Kamera" fetchpriority="high"><span class="image-note">Symbolbild</span></div>
+      <div class="hero-shade"></div>
+      <div class="hero-inner">
+        <div class="hero-content"><p class="eyebrow">HELFERNETZ BERLIN-KÖPENICK</p><h1 id="hero-title">Damit sie<br>wieder nach<br><span>Hause findet.</span></h1><p class="hero-description">Wenn eine Katze fehlt, zählt besonnenes Handeln. Wir unterstützen bei der Suche, bei Sichtungen und beim Auslesen von Chips.</p><div class="hero-actions"><a class="button button-light" href="#hilfe">Ich brauche Hilfe <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="plain-link" href="#wissen">Richtig suchen <svg class="icon" aria-hidden="true"><use href="#i-diagonal"/></svg></a></div></div>
+        <div class="hero-image-caption"><span>GEMEINSAM SUCHEN.</span><span>ZUSAMMEN HELFEN.</span></div>
+      </div>
+    </section>
+
+    <section class="contact-strip" aria-label="Notfallkontakt"><div class="contact-strip-inner"><div class="contact-strip-label"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><div><span>UNSERE NOTFALLNUMMER</span><p>Für vermisste und gefundene Katzen.</p></div></div><a href="tel:+493081451625" class="contact-strip-button"><strong data-phone-label>030 81451625</strong><small>Sichtungen melden · Hilfe abstimmen.</small><svg class="icon" aria-hidden="true"><use href="#i-diagonal"/></svg></a></div></section>
+
+    <section class="help-section section-wrap" id="hilfe" aria-labelledby="help-title">
+      <div class="section-heading"><p class="eyebrow">DER PASSENDE NÄCHSTE SCHRITT</p><h2 id="help-title">Du suchst sie.<br>Wir helfen dir.</h2><p>Wenn deine Katze fehlt, gehen dir viele Fragen durch den Kopf. Wir helfen dir, den nächsten Schritt zu finden – auch bei einer Sichtung oder einem Fundtier.</p><button class="text-button" data-open="contact">Kontakt zum Helfernetz <svg class="icon" aria-hidden="true"><use href="#i-diagonal"/></svg></button></div>
+      <div class="help-choices"><p class="list-caption">WOBEI WIR HELFEN</p>
+        <a class="help-choice" href="#wissen"><div><strong>Meine Katze wird vermisst.</strong><p>Ruhig beginnen, Verstecke prüfen und die Suche gezielt vorbereiten.</p></div><svg class="icon" aria-hidden="true"><use href="#i-diagonal"/></svg></a>
+        <button class="help-choice" data-open="found"><div><strong>Ich habe eine Katze gesichtet.</strong><p>Ort, Uhrzeit und Merkmale festhalten. Bitte nicht hinterherlaufen.</p></div><svg class="icon" aria-hidden="true"><use href="#i-diagonal"/></svg></button>
+        <button class="help-choice" data-open="chip"><div><strong>Ich möchte einen Chip auslesen.</strong><p>Eine Kennnummer kann helfen, die Katze ihrem Zuhause zuzuordnen.</p></div><svg class="icon" aria-hidden="true"><use href="#i-diagonal"/></svg></button>
+      </div>
+    </section>
+
+    <section class="night-section" id="wissen" aria-labelledby="night-title"><div class="night-inner">
+      <div class="night-heading"><p class="eyebrow">ENTLAUFENE WOHNUNGSKATZEN</p><h2 id="night-title">Leise suchen.<br>Genau hinsehen.</h2><p>Wohnungskatzen verstecken sich häufig ganz in der Nähe. Aus Angst bleiben sie manchmal vollkommen still – selbst wenn vertraute Menschen direkt vor ihnen stehen.</p><div class="search-window"><span>RUHIGE SUCHZEITEN</span><strong>22–2 Uhr</strong><p>zum Beispiel spätabends oder vor Sonnenaufgang</p></div><button class="button button-light" data-open="checklist">Nacht-Checkliste öffnen <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+      <div class="night-content"><p class="list-caption">KATZE ENTLAUFEN? SO SUCHST DU RICHTIG – BESONDERS IN DER NACHT.</p><div class="guide-accordions">
+        <details open><summary>Am Entlaufort beginnen<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div><p>Beginne direkt dort, wo die Katze entlaufen ist. Kontrolliere die unmittelbare Umgebung und mögliche Verstecke gründlich. Beziehe deine Nachbarn ein.</p><p>Für weitere Suchrunden kannst du außen beginnen und dich ruhig zum Haus vorarbeiten. Das ist eine mögliche Taktik, keine allgemeingültige Regel.</p></div></details>
+        <details><summary>Gut ausgerüstet und erkennbar suchen<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div><p>Nimm eine Taschenlampe mit und trage eine Warnweste oder eine deutlich sichtbare Kennzeichnung als Katzensuchteam. Suche langsam, leise und ohne hektische Aktionen. Bleibe zwischendurch stehen und lausche.</p></div></details>
+        <details><summary>Verstecke gemeinsam kontrollieren<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div><p>Prüfe Bereiche unter Autos, Hecken, Keller, Garagen, Schuppen und Gartenhäuser gründlich. Bitte Nachbarn um Unterstützung. Betritt fremde Grundstücke und Gebäude nur mit Erlaubnis.</p></div></details>
+        <details><summary>Futterstellen gezielt beobachten<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div><p>Nutze wenige geschützte, kontrollierbare Stellen. Eine Wildkamera kann zeigen, welches Tier dort frisst. Auch andere Tiere können angelockt werden; stimme das Vorgehen deshalb mit dem Helferteam ab.</p></div></details>
+      </div><aside class="important-note"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><p><strong>Gesichtet? Nicht hinterherlaufen.</strong>Ruhig bleiben, den Standort notieren und die Sicherung gezielt vorbereiten.</p></aside></div>
+    </div></section>
+
+    <section class="knowledge-section section-wrap" aria-labelledby="knowledge-title"><div class="knowledge-heading"><div><p class="eyebrow">WISSEN FÜR DIE SUCHE</p><h2 id="knowledge-title">Gut vorbereitet.<br>Für ihre Rückkehr.</h2></div><p>Unsere Anleitungen zum Nachlesen. Als Ergänzung zur ruhigen Suche und zur gemeinsamen Abstimmung vor Ort.</p></div><div class="guide-grid">
+      <button class="guide-entry" data-open="scent"><span class="guide-category">HEIMWEGSCHLEPPE</span><h3>Vertraute Gerüche.<br>Ein Weg nach Hause.</h3><p>Geruchsspuren mit getragenen Kleidungsstücken und die optionale Urinvariante.</p><span class="guide-entry-link">Anleitung lesen <svg class="icon" aria-hidden="true"><use href="#i-diagonal"/></svg></span></button>
+      <button class="guide-entry" data-open="food"><span class="guide-category">FUTTERGERUCH &amp; FUTTERSTELLEN</span><h3>Gezielt vorbereiten.<br>Kontrolliert beobachten.</h3><p>Was bei Thunfischwasser, Futterstellen und der Beobachtung mit Wildkameras wichtig ist.</p><span class="guide-entry-link">Anleitung lesen <svg class="icon" aria-hidden="true"><use href="#i-diagonal"/></svg></span></button>
+      <button class="guide-entry" data-open="flyers"><span class="guide-category">SUCHFLYER &amp; NACHBARSCHAFT</span><h3>Mehr Menschen.<br>Mehr aufmerksame Augen.</h3><p>Suchflyer lesbar gestalten, sinnvoll verteilen und die Nachbarschaft einbeziehen.</p><span class="guide-entry-link">Anleitung lesen <svg class="icon" aria-hidden="true"><use href="#i-diagonal"/></svg></span></button>
+    </div></section>
+
+
+<section class="generator section-wrap" id="flyer" aria-labelledby="flyer-title">
+<div class="downloads-heading"><div><p class="eyebrow">GEMEINSAM SICHTBAR MACHEN</p><h2 id="flyer-title">Deine Katze.<br>Dein Suchflyer.</h2></div><p>Ein klares Foto. Die wichtigsten Angaben. Ein Flyer, der sofort hilft. Mit dem Logo und der Telefonnummer unseres Helfernetzes.</p></div>
+<div class="generator-grid"><form id="flyer-form">
+<label class="upload-field" for="pet-photo"><strong>Foto deiner Katze auswählen</strong><span>JPG, PNG oder WebP · bis 15 MB</span><input id="pet-photo" type="file" accept="image/jpeg,image/png,image/webp" required><small id="photo-status" role="status">Das Foto wird vollständig gezeigt, nicht beschnitten.</small></label>
+<div class="flyer-fields"><label>Name der Katze<input name="petName" maxlength="35" required placeholder="z. B. Maja" autocomplete="off"></label><label>Vermisst seit<input name="date" type="date" required></label><label class="wide">Entlaufort / Umgebung<input name="place" maxlength="100" required placeholder="Straße oder Orientierungspunkt, Ortsteil" autocomplete="off"></label><label class="wide">Aussehen &amp; besondere Merkmale<textarea name="details" maxlength="280" rows="4" required placeholder="Fellfarbe, Muster, auffällige Merkmale, Verhalten …"></textarea></label><label class="wide">Zusätzlicher Kontakt <span>(optional)</span><input name="contact" maxlength="65" placeholder="Deine Telefonnummer oder E-Mail" autocomplete="off"></label></div>
+<p class="generator-note">Unser Kontakt <strong>030 81451625</strong> steht immer auf dem Flyer. Zusätzliche Kontaktdaten sind ebenfalls öffentlich sichtbar, wenn du den Flyer teilst.</p>
+<button class="button button-dark" id="flyer-download" type="submit" disabled>PDF herunterladen <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg></button><p id="flyer-status" role="status" class="generator-note">Vorschau wird vorbereitet …</p><p class="generator-note">Foto und Eingaben bleiben in dieser geöffneten Seite. Kein Upload an einen Server, keine Speicherung nach dem Neuladen.</p>
+</form><div class="flyer-preview"><span class="preview-label">DEINE VORSCHAU · A4</span><canvas id="flyer-canvas" width="1654" height="2339" role="img" aria-label="Vorschau des Suchflyers mit deinen Angaben und dem Logo des Helfernetzes"></canvas><small>Die PDF entspricht dieser Vorschau. Vor dem Verteilen bitte alle Angaben prüfen.</small></div></div></section>
+    <section class="downloads-section section-wrap" id="downloads" aria-labelledby="downloads-title">
+      <div class="downloads-heading"><div><p class="eyebrow">ZUM MITNEHMEN &amp; WEITERGEBEN</p><h2 id="downloads-title">Gute Hilfe.<br>Auch auf Papier.</h2></div><p>Ein Suchflyer für deine Katze und kompakte Anleitungen für unterwegs. Alle Vorlagen sind kostenlos, in A4 und ohne Anmeldung verfügbar.</p></div>
+      <div class="downloads-layout"><article class="flyer-feature"><div class="paper-preview" aria-hidden="true"><span>HELFERNETZ · TEAM KÖPENICK</span><strong>KATZE<br>VERMISST</strong><div class="paper-photo"><svg class="icon"><use href="#i-search"/></svg><small>PLATZ FÜR DEIN FOTO</small></div><div class="paper-rules"><i></i><i></i><i></i></div><b>BITTE NICHT VERFOLGEN.</b></div><div class="flyer-copy"><span class="guide-category">DEIN FOTO. UNSERE VORLAGE.</span><h3>Dein Suchflyer.</h3><p>Foto hochladen, Angaben ergänzen und deinen fertigen Flyer als PDF herunterladen. Immer im gleichen Design und mit unserem Logo.</p><a class="button button-dark" href="#flyer">Flyer erstellen <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><small>Ohne Anmeldung · direkt auf deinem Gerät</small><a class="text-button" href="./downloads/suchflyer.pdf" download>Leere PDF-Vorlage herunterladen</a></div></article>
+      <div class="download-list"><a class="download-row" href="./downloads/nachtsuche.pdf" download><span><small>SUCHHILFE · 1 SEITE</small><strong>Richtig suchen. Auch nachts.</strong><span>Ruhige Suchzeiten, Ausrüstung und eine Checkliste.</span><em>PDF · A4</em></span><svg class="icon" aria-label="Herunterladen"><use href="#i-download"/></svg></a><a class="download-row" href="./downloads/heimwegschleppe.pdf" download><span><small>GERUCHSSPUREN · 2 SEITEN</small><strong>Vertrauter Geruch nach Hause.</strong><span>Heimwegschleppe und die optionale Urinvariante.</span><em>PDF · A4</em></span><svg class="icon" aria-label="Herunterladen"><use href="#i-download"/></svg></a><a class="download-row" href="./downloads/futtergeruch.pdf" download><span><small>FUTTERGERUCH · 1 SEITE</small><strong>Gezielt legen. Kontrolliert beobachten.</strong><span>Thunfischwasser, geschützte Futterstellen und Wildkameras.</span><em>PDF · A4</em></span><svg class="icon" aria-label="Herunterladen"><use href="#i-download"/></svg></a></div></div>
+      <p class="downloads-note">Eine Geruchsspur ist eine ergänzende Maßnahme. Beginne die Suche direkt am Entlaufort und stimme weitere Schritte mit dem Helferteam ab.</p>
+    </section>
+
+    <section class="network-section" id="netzwerk" aria-labelledby="network-title"><div class="network-inner"><figure class="network-photo"><img src="./assets/cat-care.webp" width="1122" height="1402" alt="Eine Katze lehnt sich entspannt in eine sanft streichelnde Hand" loading="lazy"><figcaption>Symbolbild</figcaption></figure><div class="network-main"><p class="eyebrow">DAS TEAM HINTER DEM HELFERNETZ</p><h2 id="network-title">Hier hilft<br>Nachbarschaft.</h2><p>Wir sind das Team Köpenick im Kleinen Helfernetz Berlin-Brandenburg. Wir kümmern uns um entlaufene und gefundene Katzen, lesen Chips aus und bringen Menschen zusammen, die helfen wollen.</p><p>Manchmal beginnt Hilfe mit einem aufmerksamen Blick. Manchmal mit einer Taschenlampe und Zeit für eine gemeinsame Suchrunde.</p><div class="team-signature"><img src="./assets/helfernetz-emblem-matt.webp" width="1254" height="1254" alt="Emblem Kleines Helfernetz Berlin-Brandenburg, Team Köpenick" loading="lazy"><div><strong>Kleines Helfernetz</strong><span>Berlin-Brandenburg · Team Köpenick</span></div></div><div class="team-roles" aria-label="So hilft unser Team"><div><strong>Suchen &amp; sichern</strong><p>Ruhige Suchrunden begleiten und Sichtungen für die Sicherung einordnen.</p></div><div><strong>Chips auslesen</strong><p>Eine gefundene Katze ihrem Zuhause zuordnen helfen.</p></div><div><strong>Menschen verbinden</strong><p>Nachbarn und helfende Hände für die Suche zusammenbringen.</p></div></div><div class="network-invitation"><strong>Du möchtest mithelfen?</strong><p>Wir stimmen gemeinsam ab, wo deine Unterstützung gebraucht wird.</p><button class="button button-dark" data-open="join">Teil des Helfernetzes werden <svg class="icon" aria-hidden="true"><use href="#i-diagonal"/></svg></button></div></div></div></section>
+
+    <section class="faq-section section-wrap" id="fragen" aria-labelledby="faq-title"><div class="section-heading"><p class="eyebrow">GUT ZU WISSEN</p><h2 id="faq-title">Fragen,<br>die oft bleiben.</h2></div><div class="faq-list">
+      <details><summary>Welche Angaben helfen bei einer Sichtung?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div><p>Notiere den genauen Standort und die Uhrzeit. Ein Foto, Fellfarbe, auffällige Merkmale und die Laufrichtung helfen bei der Zuordnung. Laufe der Katze nicht hinterher.</p><button class="text-button" data-open="found">Sichtung vorbereiten <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div></details>
+      <details><summary>Warum reagiert meine Wohnungskatze nicht auf mich?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div><p>Eine entlaufene Wohnungskatze kann aus Angst vollkommen still bleiben. Manche kommen selbst dann nicht hervor, wenn vertraute Menschen direkt vor ihrem Versteck stehen. Kontrolliere Verstecke deshalb gründlich und suche ruhig.</p></div></details>
+      <details><summary>Kann das Team beim Chip-Auslesen helfen?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div><p>Chip-Auslesen gehört zur Hilfe unseres Teams. Halte den Fundort und eine Beschreibung der Katze bereit, damit wir das weitere Vorgehen gemeinsam abstimmen können.</p><button class="text-button" data-open="chip">Hinweise zum Chip-Auslesen <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div></details>
+      <details><summary>Wie erreiche ich das Helfernetz?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div><p>Du erreichst unser Team unter <a href="tel:+493081451625">030 81451625</a>. Halte Ort, Uhrzeit und möglichst ein Foto bereit.</p><button class="text-button" data-open="contact">Zum Notfallkontakt <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div></details>
+    </div></section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-main"><div class="footer-brand"><a class="brand" href="#start"><span>helfernetz<span class="brand-dot">.</span></span><small>BERLIN–KÖPENICK</small></a><p>Gemeinsam für die Tiere<br>in unserem Kiez.</p></div><div class="footer-nav"><span>ORIENTIERUNG</span><a href="#hilfe">Hilfe finden</a><a href="#wissen">Suchwissen</a><a href="#downloads">Downloads</a><a href="#netzwerk">Unser Team</a></div><div class="footer-contact"><span>NOTFALLKONTAKT</span><button data-open="contact"><strong data-phone-label>030 81451625</strong><svg class="icon" aria-hidden="true"><use href="#i-diagonal"/></svg></button><p>Für vermisste und gefundene Katzen.</p></div></div><div class="footer-bottom"><span>Website-Entwurf · Kleines Helfernetz · Team Köpenick</span><div><button data-open="imprint">Impressum</button><button data-open="privacy">Datenschutz</button><a href="#start" aria-label="Zurück nach oben"><svg class="icon" aria-hidden="true"><use href="#i-up"/></svg></a></div></div></footer>
+  <aside class="mobile-dock" aria-label="Notfallkontakt"><a href="tel:+493081451625"><div><span>NOTFALLNUMMER</span><strong data-phone-label>030 81451625</strong></div><span class="dock-action">Kontakt <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span></a></aside>
+
+  <dialog id="help-dialog" aria-labelledby="dialog-title"><div class="dialog-bar"><span>HELFERNETZ · TEAM KÖPENICK</span><button class="dialog-close" aria-label="Fenster schließen"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div><div id="dialog-content"></div></dialog>
+</body>
+</html>
