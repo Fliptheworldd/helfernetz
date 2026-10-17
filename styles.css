@@ -50,3 +50,8 @@ dialog{border:0;border-radius:2px;padding:0;background:var(--paper);color:var(--
 @media(prefers-reduced-motion:reduce){.cat-walk.is-walking .cat-runner,.cat-walk.is-walking .walking-cat,.cat-walk.is-walking .cat-leg,.cat-walk.is-walking .cat-tail{animation:none}.help-choice{transition:none}.help-choice:hover{transform:none}}
 
 @media(max-width:760px){.mobile-dock>:is(button,a){background:#174967;color:#fff;padding:12px 15px;margin:8px 0}.mobile-dock>:is(button,a)>div>span{color:#d4e3eb}.hero-description{color:#dae7ec}}
+
+/* Approved team emblem, including the phone number: always shown in full. */
+.header-emblem,.menu-brand img,.belong-art>img,.team-signature img{object-fit:contain;border-radius:8px}
+.belong-art>img{border-radius:24px;border:0}.team-signature{flex-direction:column;align-items:flex-start;padding:24px;gap:20px}.team-signature img{width:min(100%,300px);height:auto;align-self:center;border-radius:16px}.team-signature>div{width:100%;text-align:center}.team-signature strong{font-size:18px}.team-signature span{font-size:12px}.footer-emblem{width:118px;height:auto;border-radius:10px;margin-bottom:22px}.dialog-emblem{width:56px;height:56px;object-fit:contain;border-radius:5px;flex-shrink:0}.dialog-bar>span{margin-right:auto}.dialog-bar{gap:12px}
+@media(max-width:760px){.team-signature{padding:22px}.team-signature img{width:min(100%,280px)}.team-signature strong{font-size:17px}.footer-emblem{width:106px}.dialog-emblem{width:44px;height:44px}.dialog-bar>span{font-size:7px}}

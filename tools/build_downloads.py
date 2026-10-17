@@ -25,7 +25,7 @@ SOFT = colors.HexColor('#f2f1eb')
 W,H=A4
 M=43
 WIDTH=W-M*2
-LOGO=ROOT/'assets/helfernetz-emblem-matt.webp'
+LOGO=ROOT/'assets/helfernetz-logo-telefon.webp'
 logo_bytes=BytesIO()
 Image.open(LOGO).convert('RGB').save(logo_bytes,format='JPEG',quality=75,optimize=True)
 logo_bytes.seek(0)
