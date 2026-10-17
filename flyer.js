@@ -3,22 +3,25 @@
  const form=document.querySelector('#flyer-form'), canvas=document.querySelector('#flyer-canvas'), ctx=canvas.getContext('2d');
  const status=document.querySelector('#flyer-status'), photoStatus=document.querySelector('#photo-status'), button=document.querySelector('#flyer-download');
  const logo=new Image(); let photo=null, ready=false, revision=0;
- const ink='#202723', muted='#627067', accent='#925e3b';
+ const ink='#202723', muted='#627067', accent='#b5202b';
  function text(value,x,y,size=30,bold=false,color=ink){ctx.font=`${bold?'700':'400'} ${size}px Arial`;ctx.fillStyle=color;ctx.fillText(value,x,y);}
  function lines(value,width,size,bold){ctx.font=`${bold?'700':'400'} ${size}px Arial`;const out=[];for(const paragraph of String(value).split('\n')){let line='';for(const word of paragraph.split(/\s+/)){const candidate=line?line+' '+word:word;if(ctx.measureText(candidate).width<=width){line=candidate;continue;}if(line){out.push(line);line='';}for(const char of word){if(ctx.measureText(line+char).width>width&&line){out.push(line);line='';}line+=char;}}out.push(line);}return out;}
  function fit(value,x,y,width,height,size=40,bold=false){let rows;do{rows=lines(value,width,size,bold);if(rows.length*size*1.3<=height)break;size-=1;}while(size>16);rows.forEach((line,i)=>text(line,x,y+i*size*1.3,size,bold));}
  function render(){ctx.fillStyle='#fff';ctx.fillRect(0,0,1654,2339);if(ready)ctx.drawImage(logo,105,75,170,170);
  text('KLEINES HELFERNETZ',310,120,30,true);text('Berlin-Brandenburg · Team Köpenick',310,165,27);text('Notfallkontakt: 030 81451625',310,211,29,true);
- ctx.fillStyle=ink;ctx.fillRect(105,280,1444,3);text('KATZE VERMISST',105,430,133,true);
+ ctx.fillStyle=accent;ctx.fillRect(105,280,1444,175);text('KATZE VERMISST!',140,408,116,true,'#fff');
  fit(form.elements.petName.value.trim()||'Name deiner Katze',105,530,1444,75,63,true);
- ctx.fillStyle='#f2f1eb';ctx.fillRect(105,580,1444,850);
- if(photo){const scale=Math.min(1444/photo.naturalWidth,850/photo.naturalHeight),w=photo.naturalWidth*scale,h=photo.naturalHeight*scale;ctx.drawImage(photo,105+(1444-w)/2,580+(850-h)/2,w,h);}else{text('Hier erscheint dein Katzenfoto',330,1020,52,false,muted);}
- text('VERMISST SEIT',105,1500,25,true,muted);const date=form.elements.date.value;const formatted=date?date.split('-').reverse().join('.'):'Datum ergänzen';text(formatted,105,1555,40,true);
- text('ENTLAUFORT / UMGEBUNG',600,1500,25,true,muted);fit(form.elements.place.value.trim()||'Entlaufort ergänzen',600,1555,949,112,40,true);
- text('AUSSEHEN & BESONDERE MERKMALE',105,1700,25,true,muted);fit(form.elements.details.value.trim()||'Fellfarbe, Muster und besondere Merkmale ergänzen.',105,1755,1444,195,39);
- ctx.fillStyle='#eff1eb';ctx.fillRect(105,1960,1444,175);text('SICHTUNGEN BITTE AN UNSER HELFERNETZ',140,2005,25,true);text('030 81451625',140,2084,70,true);
- const contact=form.elements.contact.value.trim();if(contact)fit('Zusätzlicher Kontakt: '+contact,105,2182,1444,50,30);
- text('Bitte nicht verfolgen oder einfangen.',105,2250,38,true,accent);text('Ruhig bleiben. Sichtung mit genauem Ort und Uhrzeit melden.',105,2302,27);
+ ctx.fillStyle='#f2f1eb';ctx.fillRect(105,580,1444,700);
+ if(photo){const scale=Math.min(1444/photo.naturalWidth,700/photo.naturalHeight),w=photo.naturalWidth*scale,h=photo.naturalHeight*scale;ctx.drawImage(photo,105+(1444-w)/2,580+(700-h)/2,w,h);}else{text('Hier erscheint dein Katzenfoto',330,950,52,false,muted);}
+ text('VERMISST SEIT',105,1350,25,true,muted);const date=form.elements.date.value;const formatted=date?date.split('-').reverse().join('.'):'Datum ergänzen';fit(formatted,105,1405,450,60,38,true);
+ text('ENTLAUFORT / UMGEBUNG',640,1350,25,true,muted);fit(form.elements.place.value.trim()||'Entlaufort ergänzen',640,1405,909,90,40,true);
+ text('AUSSEHEN & BESONDERE MERKMALE',105,1520,25,true,muted);fit(form.elements.details.value.trim()||'Fellfarbe, Muster und besondere Merkmale ergänzen.',105,1575,1444,165,37);
+ ctx.fillStyle='#f4f5f4';ctx.fillRect(105,1770,1444,180);
+ fit('Bitte schauen Sie auch in Garagen, Kellerräumen, Luftschächten und anderen möglichen Verstecken nach. Die Katze könnte unbemerkt eingesperrt worden sein. Vielen Dank für Ihre Mithilfe.',135,1813,1384,135,32);
+ ctx.fillStyle=accent;ctx.fillRect(105,1990,1444,170);text('BEI SICHTUNG BITTE SOFORT ANRUFEN',140,2037,31,true,'#fff');text('030 81451625',140,2123,77,true,'#fff');
+ const contact=form.elements.contact.value.trim();if(contact)fit('Zusätzlicher Kontakt: '+contact,105,2210,1444,45,28);
+ text('Bitte nicht verfolgen. Ort und Uhrzeit notieren.',105,2280,33,true);
+
  }
  // A single JPEG image on an A4 PDF page; all byte offsets are calculated from bytes.
  function makePDF(jpeg){const enc=new TextEncoder(),parts=[],offsets=[0];let length=0;const push=v=>{const bytes=typeof v==='string'?enc.encode(v):v;parts.push(bytes);length+=bytes.length;};const obj=(n,body)=>{offsets[n]=length;push(`${n} 0 obj\n${body}\nendobj\n`);};push('%PDF-1.4\n');obj(1,'<< /Type /Catalog /Pages 2 0 R >>');obj(2,'<< /Type /Pages /Kids [3 0 R] /Count 1 >>');obj(3,'<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.276 841.89] /Resources << /XObject << /Im0 4 0 R >> >> /Contents 5 0 R >>');offsets[4]=length;push(`4 0 obj\n<< /Type /XObject /Subtype /Image /Width 1654 /Height 2339 /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${jpeg.length} >>\nstream\n`);push(jpeg);push('\nendstream\nendobj\n');const commands='q\n595.276 0 0 841.89 0 0 cm\n/Im0 Do\nQ\n';obj(5,`<< /Length ${enc.encode(commands).length} >>\nstream\n${commands}endstream`);const xref=length;push('xref\n0 6\n0000000000 65535 f \n');for(let i=1;i<=5;i++)push(`${String(offsets[i]).padStart(10,'0')} 00000 n \n`);push(`trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF`);return new Blob(parts,{type:'application/pdf'});}
