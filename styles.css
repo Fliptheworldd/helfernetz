@@ -68,3 +68,5 @@ dialog{border:0;border-radius:2px;padding:0;background:var(--paper);color:var(--
 
 /* Match the sky blue sampled from the approved emblem's background. */
 .site-header{background:#b6e9fe;color:#123a58;border-bottom-color:#9bd4ec}.site-header .brand-type>small{color:#31596f}.site-header .brand-dot{color:#123a58}.site-header .menu-toggle{border-color:#75acc5;background:transparent;color:#123a58}.site-header .header-emblem{border-radius:0;box-shadow:none}
+
+.footer-email{display:inline-block;font-size:14px;color:#fff;margin-top:16px;text-decoration:underline;text-underline-offset:4px}.footer-contact>button.footer-support{font-size:12px;color:#ffcf66;padding:16px 0}.network-invitation a{font-weight:700;text-decoration:underline;text-underline-offset:3px}
