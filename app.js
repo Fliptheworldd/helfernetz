@@ -114,3 +114,36 @@ siteMenu.addEventListener('close', () => {
 });
 
 document.addEventListener('click', event => { if(event.target.closest('[data-flyer-link]')) { dialog.close(); document.querySelector('#flyer').scrollIntoView({behavior:'smooth'}); } });
+
+// A deliberate, short moment of play. Never runs over content or the emergency dock.
+(() => {
+  const stage = document.querySelector('#cat-walk');
+  const button = document.querySelector('#cat-walk-button');
+  const runner = document.querySelector('#cat-runner');
+  const status = document.querySelector('#cat-walk-status');
+  if (!stage || !button || !runner) return;
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let timer;
+  function finish() {
+    clearTimeout(timer);
+    stage.classList.remove('is-walking');
+    stage.classList.add('is-home');
+    button.disabled = false;
+    button.firstChild.textContent = 'Noch eine Runde auf Samtpfoten ';
+    status.textContent = 'Angekommen. Genau das wünschen wir jeder Katze.';
+  }
+  button.addEventListener('click', () => {
+    stage.classList.remove('is-home');
+    status.textContent = '';
+    if (reduced.matches) { finish(); return; }
+    button.disabled = true;
+    stage.classList.add('is-walking');
+    timer = setTimeout(finish, 4000);
+  });
+  runner.addEventListener('animationend', event => {
+    if (event.animationName === 'cat-cross') finish();
+  });
+  reduced.addEventListener('change', () => {
+    if (reduced.matches && stage.classList.contains('is-walking')) finish();
+  });
+})();
