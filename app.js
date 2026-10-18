@@ -118,7 +118,7 @@ siteMenu.addEventListener('close', () => {
   menuFocusTarget = null;
 });
 
-document.addEventListener('click', event => { if(event.target.closest('[data-flyer-link]')) { event.preventDefault(); dialog.close(); const flyer = document.querySelector('#flyer'); if (flyer) flyer.scrollIntoView({behavior:'smooth'}); else window.location.href = '/#flyer'; } });
+document.addEventListener('click', event => { if(event.target.closest('[data-flyer-link]')) { event.preventDefault(); dialog.close(); const flyer = document.querySelector('#flyer'); if (flyer) flyer.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}); else window.location.href = '/suchplakate/#flyer'; } });
 
 // A deliberate, short moment of play. Never runs over content or the emergency dock.
 (() => {
@@ -152,3 +152,6 @@ document.addEventListener('click', event => { if(event.target.closest('[data-fly
     if (reduced.matches && stage.classList.contains('is-walking')) finish();
   });
 })();
+
+// Copyable neighborhood messages; fallback selects the text for manual copying.
+document.addEventListener('click',async e=>{const b=e.target.closest('[data-copy]');if(!b)return;const p=document.getElementById(b.dataset.copy);try{await navigator.clipboard.writeText(p.textContent);b.textContent='Kopiert – Platzhalter bitte ergänzen';}catch{const r=document.createRange();r.selectNodeContents(p);const s=window.getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Text markiert – bitte kopieren';}});
