@@ -6,3 +6,5 @@
 .copy-template{background:#eaf8ff;padding:22px;border-radius:14px}.copy-template button{margin-top:16px}.search-article a:not(.button){text-underline-offset:4px}.search-article .guide-text-link{margin-right:20px}.search-sidebar nav{max-height:60vh;overflow:auto}@media(max-width:760px){.search-sidebar nav{max-height:260px}.search-intro h1{overflow-wrap:anywhere}}
 
 .legal-page{max-width:950px;margin:25px auto 60px;padding:0 24px}.legal-page h1{font-size:42px;margin-bottom:24px}.legal-page h2{margin-top:30px}.legal-page p{margin:15px 0}.legal-page .guide-tag{margin-bottom:15px}.copy-template button:focus-visible{outline:3px solid #d60020;outline-offset:3px}
+
+.search-article ol{padding-left:25px;margin:20px 0}.search-article ol li{padding-left:7px;margin-bottom:18px}.search-article h3{font-size:23px;line-height:1.3;margin:25px 0 14px}.method-figure{margin:25px 0}.method-figure img{display:block;width:100%;height:auto;border-radius:12px}.method-figure figcaption{font-size:13px;line-height:1.6;color:#405c91;margin-top:12px}.method-figure a{display:block}.method-figure a:focus-visible{outline:3px solid #e40020;outline-offset:5px}
