@@ -15,5 +15,5 @@ Statische Website ohne Build-Schritt. Alle internen Ressourcen sind relativ verl
 `tools/build_downloads.py` erstellt die vier Download-PDFs (ReportLab und Pillow).
 
 ## Aktueller Stand
-Die Betreiberangaben für den eigenständigen Betrieb müssen noch ergänzt werden. Die Seite bleibt deshalb als Entwurf gekennzeichnet und für Suchmaschinen auf noindex.
+Impressum und Datenschutz sind unter `/impressum/` und `/datenschutz/` verlinkt. Die inhaltliche Vollständigkeit der Betreiberangaben ist separat zu prüfen. Die geprüften Haupt- und Unterseiten wurden am 21.10.2026 für die Suchmaschinenindexierung freigegeben; `robots.txt` und `sitemap.xml` wurden ergänzt.
 Offene Erweiterungen des Flyers: rote Überschrift mit Ausrufezeichen, einzelne Tiermerkmale, Hinweis auf mögliche Einschließung. E-Mail-QR-Code erst nach Festlegung der Teamadresse.
