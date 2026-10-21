@@ -12,7 +12,7 @@ for f in FILES:
 
 def inline(text):
     text=E(text)
-    text=re.sub(r'https://[^\s<>]+',lambda m:f'<a href="{m[0]}">{E(m[0].split("/")[2])} ↗</a>',text)
+    text=re.sub(r'https://[^\s<>]+',lambda m:f'<a href="{m[0]}">{E(m[0].split("/")[2])}</a>',text)
     for host in ['www.tasso.net','www.findefix.com']:
         if 'https://' not in text: text=text.replace(host,f'<a href="https://{host}/">{host}</a>')
     text=re.sub(r'(?<![\w/])(?:tierheim|tiersammelstelle)@(?:tierschutz|tierheim)-berlin\.de',lambda m:f'<a href="mailto:{m[0]}">{m[0]}</a>',text)
