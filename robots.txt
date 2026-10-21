@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://helfernetz.com/sitemap.xml
