@@ -4,17 +4,17 @@
 - Tatsächlicher E-Mail-Anbieter und Umgang mit Anfragen: Zugriff, Speicherung, Weitergabe an Helfer und Löschung bestätigen.
 - PayPal: konkreter Link, Kontoinhaber/Zahlungsempfänger, Verwendungszweck und tatsächlicher Status bezüglich Zuwendungsbestätigungen. Keine steuerliche Absetzbarkeit zusagen.
 
-## Bestätigte Betreiberangaben – veröffentlicht
+## Betreiberangaben – Anschrift noch zu ergänzen
 Kleines Helfernetz Berlin-Brandenburg · Team Köpenick
-Betreiber: VachSystems, Inhaber Patrick Vach
-Anschrift: Charlottenburger Str. 142, 13086 Berlin, Deutschland
-Betreiberkontakt: contact@vachsystems.de
+Betreiberin: Shenja Wache
+Ort: Berlin-Müggelheim (vollständige Anschrift noch zu ergänzen)
+Technische Umsetzung: VachSystems im Auftrag der Betreiberin
 Telefon: 030 81451625
 E-Mail: info@helfernetz.com
 
 ## Datenschutz – vorbereitete Bausteine
 ### Verantwortlicher
-Patrick Vach, VachSystems, Anschrift wie oben, erreichbar unter contact@vachsystems.de.
+Shenja Wache, Berlin-Müggelheim, erreichbar unter info@helfernetz.com. Vollständige Anschrift noch zu ergänzen.
 
 ### Bereitstellung der Website
 Die Website wird über GitHub Pages ausgeliefert. Beim Abruf werden technisch erforderliche Verbindungsdaten, insbesondere IP-Adresse und Angaben zur Anfrage, an den Hostingdienst übermittelt. Für die Bereitstellung und Sicherheit ist Art. 6 Abs. 1 lit. f DSGVO als Rechtsgrundlage zu prüfen. Vertragspartner, Empfänger, Speicherfristen und gegebenenfalls Drittlandübermittlung müssen anhand des tatsächlich eingesetzten GitHub-Kontos und der gültigen Vertragsunterlagen ergänzt werden.
